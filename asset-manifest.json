@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Anlander/gransnittutveckling-sysm8-anlander/static/css/main.e1f8a49c.css",
-    "main.js": "/Anlander/gransnittutveckling-sysm8-anlander/static/js/main.96fafd19.js",
-    "static/js/453.4fbc1af9.chunk.js": "/Anlander/gransnittutveckling-sysm8-anlander/static/js/453.4fbc1af9.chunk.js",
-    "index.html": "/Anlander/gransnittutveckling-sysm8-anlander/index.html",
-    "main.e1f8a49c.css.map": "/Anlander/gransnittutveckling-sysm8-anlander/static/css/main.e1f8a49c.css.map",
-    "main.96fafd19.js.map": "/Anlander/gransnittutveckling-sysm8-anlander/static/js/main.96fafd19.js.map",
-    "453.4fbc1af9.chunk.js.map": "/Anlander/gransnittutveckling-sysm8-anlander/static/js/453.4fbc1af9.chunk.js.map"
+    "main.css": "/gransnittutveckling-sysm8-anlander/static/css/main.e1f8a49c.css",
+    "main.js": "/gransnittutveckling-sysm8-anlander/static/js/main.52ec3321.js",
+    "static/js/453.4fbc1af9.chunk.js": "/gransnittutveckling-sysm8-anlander/static/js/453.4fbc1af9.chunk.js",
+    "index.html": "/gransnittutveckling-sysm8-anlander/index.html",
+    "main.e1f8a49c.css.map": "/gransnittutveckling-sysm8-anlander/static/css/main.e1f8a49c.css.map",
+    "main.52ec3321.js.map": "/gransnittutveckling-sysm8-anlander/static/js/main.52ec3321.js.map",
+    "453.4fbc1af9.chunk.js.map": "/gransnittutveckling-sysm8-anlander/static/js/453.4fbc1af9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e1f8a49c.css",
-    "static/js/main.96fafd19.js"
+    "static/js/main.52ec3321.js"
   ]
 }
