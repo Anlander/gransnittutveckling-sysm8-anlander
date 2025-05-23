@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gransnittutveckling-sysm8-anlander/static/css/main.e1f8a49c.css",
-    "main.js": "/gransnittutveckling-sysm8-anlander/static/js/main.52ec3321.js",
-    "static/js/453.4fbc1af9.chunk.js": "/gransnittutveckling-sysm8-anlander/static/js/453.4fbc1af9.chunk.js",
-    "index.html": "/gransnittutveckling-sysm8-anlander/index.html",
-    "main.e1f8a49c.css.map": "/gransnittutveckling-sysm8-anlander/static/css/main.e1f8a49c.css.map",
-    "main.52ec3321.js.map": "/gransnittutveckling-sysm8-anlander/static/js/main.52ec3321.js.map",
-    "453.4fbc1af9.chunk.js.map": "/gransnittutveckling-sysm8-anlander/static/js/453.4fbc1af9.chunk.js.map"
+    "main.css": "https://anlander.github.io/gransnittutveckling-sysm8-anlander/static/css/main.94dadb95.css",
+    "main.js": "https://anlander.github.io/gransnittutveckling-sysm8-anlander/static/js/main.ccf45ba8.js",
+    "static/js/453.4fbc1af9.chunk.js": "https://anlander.github.io/gransnittutveckling-sysm8-anlander/static/js/453.4fbc1af9.chunk.js",
+    "index.html": "https://anlander.github.io/gransnittutveckling-sysm8-anlander/index.html",
+    "main.94dadb95.css.map": "https://anlander.github.io/gransnittutveckling-sysm8-anlander/static/css/main.94dadb95.css.map",
+    "main.ccf45ba8.js.map": "https://anlander.github.io/gransnittutveckling-sysm8-anlander/static/js/main.ccf45ba8.js.map",
+    "453.4fbc1af9.chunk.js.map": "https://anlander.github.io/gransnittutveckling-sysm8-anlander/static/js/453.4fbc1af9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1f8a49c.css",
-    "static/js/main.52ec3321.js"
+    "static/css/main.94dadb95.css",
+    "static/js/main.ccf45ba8.js"
   ]
 }
