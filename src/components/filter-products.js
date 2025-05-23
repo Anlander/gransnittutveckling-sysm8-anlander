@@ -99,7 +99,7 @@ export const FilterProducts = ({
             className="w-full bg-[#eeeddb] relative flex flex-col gap-2 rounded-xl border-black"
           >
             <img
-              src={item.image}
+              src={process.env.PUBLIC_URL + item.image}
               alt={item.title}
               className="max-h-[250px] rounded-t-lg min-h-[250px] w-full object-cover"
             />

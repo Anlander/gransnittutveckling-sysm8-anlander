@@ -25,11 +25,11 @@ export const Products = ({
     addToCart(item, quantity);
   };
 
-  if (!products) return <p>Loading...</p>;
+  if (!products) return <p className="text-center my-14 text-[2rem]">Loading products...</p>;
 
   return (
     <div className="products my-5 lg:my-14 px-4 lg:px-0">
-      <h1 className="text-[2rem] lg:text-[3rem] uppercase font-bold my-5 lg:my-10 text-center">{title}</h1>
+      <h1 className="text-[1.5rem] lg:text-[3rem] uppercase font-bold my-5 lg:my-10 text-center">{title}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {products.map(item => (
           <div
@@ -37,7 +37,7 @@ export const Products = ({
             className="w-full bg-[#eeeddb] relative flex flex-col gap-2 rounded-xl border-black"
           >
             <img
-              src={item.image}
+              src={process.env.PUBLIC_URL + item.image}
               alt={item.title}
               className="max-h-[250px] rounded-t-lg min-h-[250px] w-full object-cover"
             />

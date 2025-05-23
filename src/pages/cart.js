@@ -47,7 +47,7 @@ const Cart = ({ cart, setCart }) => {
                   <IoClose size={30} color="#2b2d42" className="w-8 lg:w-auto" />
                 </button>
                 <div className="flex gap-5 items-center">
-                  <img src={item.image} alt={item.name} className="w-14 h-14 lg:w-12 lg:h-12 object-cover hidden lg:block rounded" />
+                  <img src={process.env.PUBLIC_URL + item.image} alt={item.name} className="w-14 h-14 lg:w-12 lg:h-12 object-cover hidden lg:block rounded" />
                   <div className="flex flex-col justify-center">
                     <h2 className="text-[20px] lg:text-[2rem] font-semibold uppercase">
                       {item.title}
