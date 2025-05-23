@@ -1,6 +1,5 @@
 import { Products } from "../components/products";
 import { Basket } from "../components/ui/basket";
-import photo from '../assets/bg-hero.jpg';
 
 const Home = ({
   products,
@@ -22,7 +21,7 @@ const Home = ({
         </div>
 
         <div className="rounded-xl absolute top-0 w-full h-full bg-black z-20 opacity-30" />
-        <img src={photo} className="h-full absolute rounded-xl w-full object-cover z-0" alt="Store Logo" />
+        <img src={`${process.env.PUBLIC_URL + "/images/bg-hero.jpg"} `} className="h-full absolute rounded-xl w-full object-cover z-0" alt="Store Logo" />
       </div>
 
       <div>
