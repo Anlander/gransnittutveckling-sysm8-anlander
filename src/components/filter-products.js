@@ -59,39 +59,41 @@ export const FilterProducts = ({
   ]
 
   return (
-    <div className="products mt-0 lg:mt-24 mb-20 px-4 lg:px-0">
+    <div className="products mt-0 lg:mt-14 mb-20 px-4 lg:px-0">
 
-      <div className="flex w-full justify-end">
-        <button onClick={() => setIsFilter(!filter)}>{!filter ? "Show filter" : "Hide filter"}</button>
+      <div className="flex w-full mb-4 justify-end border-0">
+        <button className="bg-[#2b2d42] lg:min-w-[250px] text-[1.2rem] text-[#eeeddb]" onClick={() => setIsFilter(!filter)}>{!filter ? "Show filter" : "Hide filter"}</button>
       </div>
-      <div className="flex flex-col lg:flex lg:flex-row justify-center my-4 lg:my-4 font-bold">
-        <input type="text" name="search" placeholder="What are you looking for? 🍕"
-          className="w-full lg:min-w-[450px] bg-[#dfe3da]  
-          rounded-lg border-0 text-[1rem] lg:text-[1.5rem] font-bold text-[#2d2d42] px-5 py-2 lg:mx-0"
-          value={searchTerm}
-          onChange={handleSearch}
-        />
-        {filter &&
-          <div className="flex flex-col-reverse md:grid md:grid-cols-2 lg:flex lg:flex-row gap-4 mt-4 lg:mt-0 lg:gap-1">
+
+      {filter &&
+        <div className="flex flex-col lg:flex lg:flex-row justify-center my-4 lg:my-4 font-bold">
+          <input type="text" name="search" placeholder="What are you looking for? 🍕"
+            className="w-full lg:min-w-[450px] bg-[#eeeddb]  
+          rounded-lg border-0 text-[1rem] lg:text-[1.2rem] font-bold text-[#2d2d42] px-5 py-2 lg:mx-0"
+            value={searchTerm}
+            onChange={handleSearch}
+          />
+          <div className="flex flex-col-reverse md:grid md:grid-cols-2 ml-2 lg:flex lg:flex-row gap-4 mt-4 lg:mt-0 lg:gap-1">
             <button
               onClick={() => handleFilter("")}
-              className={`mr-0 lg:my-0 lg:mr-1 lg:ml-2 min-w-[150px] text-[1.2rem] font-bold ${categoryFilter === "" ? "bg-[#2d2d42] text-[#fefefe]" : "bg-transparent  text-black"}`}
+              className={`lg:min-w-[150px] border-4 font-bold text-[1rem] hover:border-[#2b2d42] transition-all duration-300
+              ${categoryFilter === "" ? "bg-[#2b2d42] border-[#2b2d42] text-[#eeeddb]" : "bg-[#eeeddb] border-[#eeeddb] text-[#2b2d42]"}  capitalize`}
             >
               All
             </button>
 
             {filterChoice.map((item) => (
               <button
-                className={`lg:min-w-[150px] border-4 font-bold text-[1.2rem] 
-              ${categoryFilter === item ? "bg-[#2d2d42] border-[#2d2d42] text-[#fefefe]" : "bg-transparent text-[#2d2d42] border-[#2d2d42]"}  capitalize`}
+                className={`lg:min-w-[150px] border-4 font-bold text-[1.2rem] hover:border-[#2b2d42] transition-all duration-300
+              ${categoryFilter === item ? "bg-[#2b2d42] border-[#2b2d42] text-[#eeeddb]" : "bg-[#eeeddb] border-[#eeeddb] text-[#2b2d42]"}  capitalize`}
                 onClick={() => handleFilter(item == "all" ? "" : item)}
               >
                 {item.replace(/_/g, ' ')}
               </button>
             ))}
           </div>
-        }
-      </div>
+        </div>
+      }
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {filteredProducts?.map(item => (
           <div

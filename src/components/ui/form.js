@@ -70,23 +70,27 @@ export const Form = ({ form, cardType, total, setForm, setCart, cart }) => {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-[50%_48.6%] gap-2">
-          <input
-            type="text"
-            name="address"
-            value={form.address}
-            onChange={handleChange}
-            required
-            placeholder="Adress"
-          />
+          <div className="flex flex-col gap-2">
+            <label>Adress</label>
+            <input
+              type="text"
+              name="address"
+              value={form.address}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-          <input
-            type="text"
-            name="city"
-            value={form.city}
-            onChange={handleChange}
-            required
-            placeholder="City"
-          />
+          <div className="flex flex-col gap-2">
+            <label>City</label>
+            <input
+              type="text"
+              name="city"
+              value={form.city}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
 
         {cardType === "card" &&
@@ -189,7 +193,8 @@ export const Form = ({ form, cardType, total, setForm, setCart, cart }) => {
 
         <button
           type="submit"
-          className="mt-2 w-full lg:text-[1.5rem] lg:max-w-[250px] bg-[#2b2d42] text-[#dfe3da] py-2 px-4 uppercase font-bold hover:bg-opacity-90 transition"
+          className="mt-2 w-full lg:text-[1.5rem] lg:max-w-[250px] 
+          bg-[#2b2d42] text-[#dfe3da] py-2 px-4 uppercase font-bold hover:bg-opacity-90 transition"
         >
           Pay with {cardType}
         </button>
