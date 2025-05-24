@@ -5,8 +5,9 @@ import { Link, useNavigate } from 'react-router-dom';
 export const RegisterForm = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
-    password: ''
+    username: '',
+    password: '',
+    email: ''
   });
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -16,11 +17,11 @@ export const RegisterForm = () => {
 
     try {
       const checkUser = await axios.get('http://localhost:3001/users', {
-        params: { email: formData.email }
+        params: { username: formData.username }
       });
 
       if (checkUser.data.length > 0) {
-        setError('Email already exists');
+        setError('username already exists');
         return;
       }
 
@@ -48,8 +49,15 @@ export const RegisterForm = () => {
         required
       />
       <input
+        type="text"
+        placeholder="username"
+        value={formData.username}
+        onChange={(e) => setFormData({ ...formData, username: e.target.value })}
+        required
+      />
+      <input
         type="email"
-        placeholder="Email"
+        placeholder="email"
         value={formData.email}
         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         required

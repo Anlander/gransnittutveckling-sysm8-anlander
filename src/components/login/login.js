@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 export const LoginForm = () => {
-  const [formData, setFormData] = useState({ email: '', password: '' });
+  const [formData, setFormData] = useState({ username: '', password: '' });
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
@@ -13,7 +13,7 @@ export const LoginForm = () => {
     try {
       const response = await axios.get('http://localhost:3001/users', {
         params: {
-          email: formData.email,
+          username: formData.username,
           password: formData.password
         }
       });
@@ -32,10 +32,10 @@ export const LoginForm = () => {
   return (
     <form onSubmit={handleSubmit} className="form-login my-24 w-[95%] p-14 rounded-lg lg:w-[40%] mx-auto">
       <input
-        type="email"
-        placeholder="Email"
+        type="username"
+        placeholder="username"
         value={formData.email}
-        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+        onChange={(e) => setFormData({ ...formData, username: e.target.value })}
         required
       />
       <input

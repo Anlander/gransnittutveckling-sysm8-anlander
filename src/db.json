@@ -83,18 +83,12 @@
   },
   "users": [
     {
-      "id": "be02",
-      "name": "Philip Anlander",
-      "email": "philip@anlander.se",
-      "password": "3108457Pa!",
-      "token": "fake-token-1748099314280"
-    },
-    {
-      "id": "764a",
-      "name": "philip2",
-      "email": "anlander@anlander.se",
-      "password": "1234!",
-      "token": "fake-token-1748100531030"
+      "id": "bd6c",
+      "name": "Joe Doe",
+      "username": "user",
+      "password": "password",
+      "email": "user@example.se",
+      "token": "fake-token-1748106265823"
     }
   ]
 }
