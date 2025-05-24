@@ -38,7 +38,7 @@ const Cart = ({ cart, setCart }) => {
       ) : (
         <div className="lg:my-4 border-0 rounded-lg bg-[#d6d1c4] pt-10 px-5 lg:px-10 pb-5">
           {cart.map(item => (
-            <div key={item.id} className="py-2 lg:py-0 flex flex-col lg:flex-row lg:mb-2 justify-between items-start lg:items-center border-b-2 lg:border-b-0 border-[#2b2d42]">
+            <div key={item.id} className="py-2 lg:py-0 flex flex-col lg:grid lg:grid-cols-2 lg:mb-2 justify-between items-start lg:items-center border-b-2 lg:border-b-0 border-[#2b2d42]">
               <div className="flex lg:flex-row items-start lg:items-center gap-0 lg:gap-2">
                 <button
                   className="bg-transparent border-0 hover:bg-transparent"
@@ -61,8 +61,8 @@ const Cart = ({ cart, setCart }) => {
                 </div>
               </div>
 
-              <div className="flex w-full justify-center items-center gap-4">
-                <div className="flex items-center">
+              <div className="flex w-full justify-center lg:justify-end items-center gap-4">
+                <div className="flex lg:items-center">
                   <button
                     className="bg-transparent border-0 hover:bg-transparent"
                     onClick={() => updateQuantity(item.id, item.quantity - 1)}
