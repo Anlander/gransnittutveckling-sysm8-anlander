@@ -1,24 +1,100 @@
 {
   "menu": {
-  "appetizers": [
-    { "id": "1", "title": "French fries", "image": "/images/frenchfries.jpg", "price": 110 },
-    { "id": "11", "title": "Mozzarella sticks", "image": "/images/mozzarella.jpg", "price": 59 }
-  ],
-  "drinks": [
-    { "id": "2", "title": "Subject", "image": "/images/subject.png", "price": 129 },
-    { "id": "3", "title": "Sank Kon", "image": "/images/sankkon.png", "price": 120 }
-  ],
-  "dessert": [
-    { "id": "4", "title": "Chocolate cake", "image": "/images/icecream.jpg", "price": 119 },
-    { "id": "5", "title": "Ice cream", "image": "/images/chocolatecake.jpg", "price": 119 },
-    { "id": "6", "title": "Chocolate mousse", "image": "/images/mousse.jpg", "price": 119 },
-    { "id": "12", "title": "Vanilla cake", "image": "/images/vanillacake.jpg", "price": 110 }
-  ],
-  "main_course": [
-    { "id": "7", "title": "Dark crispy burger", "image": "/images/darkburger.png", "price": 114 },
-    { "id": "8", "title": "Carbonara", "image": "/images/Carbonara.png", "price": 110 },
-    { "id": "9", "title": "Grilled burger", "image": "/images/grilledburger.jpg", "price": 119 },
-    { "id": "10", "title": "Salmon rice bowl", "image": "/images/salmonricebowl.jpeg", "price": 129 }
+    "appetizers": [
+      {
+        "id": "1",
+        "title": "French fries",
+        "image": "/images/frenchfries.jpg",
+        "price": 110
+      },
+      {
+        "id": "11",
+        "title": "Mozzarella sticks",
+        "image": "/images/mozzarella.jpg",
+        "price": 59
+      }
+    ],
+    "drinks": [
+      {
+        "id": "2",
+        "title": "Subject",
+        "image": "/images/subject.png",
+        "price": 129
+      },
+      {
+        "id": "3",
+        "title": "Sank Kon",
+        "image": "/images/sankkon.png",
+        "price": 120
+      }
+    ],
+    "dessert": [
+      {
+        "id": "4",
+        "title": "Chocolate cake",
+        "image": "/images/icecream.jpg",
+        "price": 119
+      },
+      {
+        "id": "5",
+        "title": "Ice cream",
+        "image": "/images/chocolatecake.jpg",
+        "price": 119
+      },
+      {
+        "id": "6",
+        "title": "Chocolate mousse",
+        "image": "/images/mousse.jpg",
+        "price": 119
+      },
+      {
+        "id": "12",
+        "title": "Vanilla cake",
+        "image": "/images/vanillacake.jpg",
+        "price": 110
+      }
+    ],
+    "main_course": [
+      {
+        "id": "7",
+        "title": "Dark crispy burger",
+        "image": "/images/darkburger.png",
+        "price": 114
+      },
+      {
+        "id": "8",
+        "title": "Carbonara",
+        "image": "/images/Carbonara.png",
+        "price": 110
+      },
+      {
+        "id": "9",
+        "title": "Grilled burger",
+        "image": "/images/grilledburger.jpg",
+        "price": 119
+      },
+      {
+        "id": "10",
+        "title": "Salmon rice bowl",
+        "image": "/images/salmonricebowl.jpeg",
+        "price": 129
+      }
+    ]
+  },
+  "users": [
+    {
+      "id": "be02",
+      "name": "Philip Anlander",
+      "email": "philip@anlander.se",
+      "password": "3108457Pa!",
+      "token": "fake-token-1748099314280"
+    },
+    {
+      "id": "764a",
+      "name": "philip2",
+      "email": "anlander@anlander.se",
+      "password": "1234!",
+      "token": "fake-token-1748100531030"
+    }
   ]
-  }
 }

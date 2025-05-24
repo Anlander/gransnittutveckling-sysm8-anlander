@@ -9,6 +9,9 @@ import Confirmation from './pages/confirmation';
 
 import './App.css';
 import Checkout from './pages/checkout';
+import { LoginForm } from './components/login/login';
+import { RegisterForm } from './components/login/register';
+import ProtectedRoute from './pages/protectedroute';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -58,6 +61,7 @@ function App() {
     }, 500);
   };
 
+
   const totalCartItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
@@ -90,7 +94,13 @@ function App() {
         />
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
         <Route path="/confirmation" element={<Confirmation />} />
-        <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} />} />
+
+        <Route path="/checkout" element={
+          <ProtectedRoute>
+            <Checkout cart={cart} setCart={setCart} />
+          </ProtectedRoute>} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/register" element={<RegisterForm />} />
       </Routes>
       <Footer />
     </>

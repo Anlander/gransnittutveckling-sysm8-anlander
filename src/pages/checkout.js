@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router";
 import { Form } from "../components/ui/form";
 
 const Checkout = ({ cart, setCart }) => {
@@ -20,9 +21,11 @@ const Checkout = ({ cart, setCart }) => {
 
   const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
+  console.log(cart.length)
+
 
   return (
-    <div className="mt-8 bg-[#d6d1c4] pt-14 container mx-auto">
+    <div className="mt-8 bg-[#d6d1c4] pt-14 container rounded-lg mx-auto">
       <div className="flex gap-2 w-full justify-center">
         <button
           onClick={() => handleCardChoice("swish")}
@@ -55,7 +58,8 @@ const Checkout = ({ cart, setCart }) => {
 
         <div>
           <div className="border-0 rounded-md border-black bg-[#f4f3e7] p-8 mt-8 ">
-            {cart.map((item) => (
+
+            {cart.length > 0 ? cart.map((item) => (
               <div key={item.id}
                 className="lg:pb-1  border-[#121212]  font-bold grid 
               items-start border-b-2 pb-2 pt-2 lg:pt-0 lg:border-0 lg:items-center 
@@ -66,7 +70,10 @@ const Checkout = ({ cart, setCart }) => {
                   <p className="font-mono text-right">{item.price * item.quantity} SEK</p>
                 </div>
               </div>
-            ))}
+            )) :
+              <span className="flex flex-col">You have no items in your cart!
+                <Link to="/menu" className="underline">go to menu</Link>
+              </span>}
           </div>
           <span className="font-bold mt-4 text-[1.5rem] flex justify-end lg:text-[2rem] 
               text-[#2b2d42] uppercase lg:p-0 w-full text-center lg:text-right rounded-sm">

@@ -1,7 +1,24 @@
 import { useNavigate } from "react-router";
+import { useEffect } from "react";
+import { getCurrentUser } from "../../helper/auth";
 
 export const Form = ({ form, cardType, total, setForm, setCart, cart }) => {
   const navigate = useNavigate();
+
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      const user = await getCurrentUser();
+      if (user) {
+        setForm(prev => ({
+          ...prev,
+          name: user.name || "",
+          email: user.email || ""
+        }));
+      }
+    };
+    fetchUserData();
+  }, [setForm]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,10 +39,6 @@ export const Form = ({ form, cardType, total, setForm, setCart, cart }) => {
         date: new Date().toISOString(),
         total: total
       };
-
-      {/* Om man vill spara alla orders som görs. */ }
-      // const existingOrders = JSON.parse(localStorage.getItem("orders")) || [];
-      // localStorage.setItem("orders", JSON.stringify([...existingOrders, newOrder]));
 
       localStorage.setItem("orders", JSON.stringify(newOrder));
 
