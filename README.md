@@ -31,7 +31,9 @@ Default port 3000
 
 ## Deploy to github 
 I choose to deploy to github with gh-pages
-change url in package.json "homepage": <your-url-to-github-pages>,
+ 
+### "homepage":  `<your-url-to-github-pages>`
+Change url in package.json to deploy to correct url in git
 
 ### `npm run deploy`
 The deploy script runs a predeploy to build the projet `npm run build` then runs the deploy `gh-pages -d build`.
